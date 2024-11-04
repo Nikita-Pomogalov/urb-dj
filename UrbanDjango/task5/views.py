@@ -35,7 +35,7 @@ def sign_up_by_html(request):
                 'error': fail,
             }
 
-    return render(request, 'registration_page.html', context=info)
+    return render(request, 'fifth_task/registration_page.html', context=info)
 
 def sign_up_by_django(request):
     users = ['Sasha', 'Petr', 'Maksim']
@@ -56,19 +56,19 @@ def sign_up_by_django(request):
                 info = {
                     'error': fail,
                 }
-                return render(request, 'registration_page.html', context=info)
+                return render(request, 'fifth_task/registration_page.html', context=info)
             if int(age) < 18:
                 fail = 'Вы должны быть старше 18'
                 info = {
                     'error': fail,
                 }
-                return render(request, 'registration_page.html', context=info)
+                return render(request, 'fifth_task/registration_page.html', context=info)
             if login in users:
                 fail = 'Пользователь уже существует'
                 info = {
                     'error': fail,
                 }
-            return render(request, 'registration_page.html', context=info)
+            return render(request, 'fifth_task/registration_page.html', context=info)
     else:
         form = UserRegister()
-    return render(request, 'registration_page.html', {'form': form})
+    return render(request, 'fifth_task/registration_page.html', {'form': form})

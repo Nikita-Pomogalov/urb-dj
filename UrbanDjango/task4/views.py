@@ -9,11 +9,11 @@ def func(request):
     context = {
         'sp': sp,
     }
-    return render(request, 'platform.html', context)
+    return render(request, 'fourth_task/platform.html', context)
 
 def games(request):
     games = ['Atomic Heart', 'Cyperpunk 2077', 'PayDay 2']
     context = {
         'games': games
     }
-    return render(request, 'games.html', context)
+    return render(request, 'fourth_task/games.html', context)

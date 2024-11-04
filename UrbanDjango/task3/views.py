@@ -3,5 +3,5 @@ from django.views.generic import TemplateView
 
 # Create your views here.
 def func(request):
-    return render(request, 'platform.html')
+    return render(request, 'third_task/platform.html')
 
